@@ -27,7 +27,6 @@ npm install @hemilabs/react-hooks
 | useEnsureConnectedTo               | [useEnsureConnectedTo](./src/useEnsureConnectedTo.ts)                             |
 | useNativeBalance                   | [useNativeBalance](./src/useNativeBalance.ts)                                     |
 | useTokenBalance                    | [useTokenBalance](./src/useTokenBalance.ts)                                       |
-| useEstimateApproveGasUnits         | [useEstimateApproveGasUnits](./src/useEstimateApproveGasUnits.ts)                 |
 | useUpdateNativeBalanceAfterReceipt | [useUpdateNativeBalanceAfterReceipt](./src/useUpdateNativeBalanceAfterReceipt.ts) |
 | useNeedsApproval                   | [useNeedsApproval](./src/useNeedsApproval.ts)                                     |
 | useOnClickOutside                  | [useOnClickOutside](./src/useOnClickOutside.ts)                                   |
