@@ -1,0 +1,5 @@
+packages:
+  - "."
+
+onlyBuiltDependencies:
+  - "wallet-watch-asset"

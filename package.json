@@ -1,5 +1,5 @@
 {
-  "name": "react-hooks",
+  "name": "@hemilabs/react-hooks",
   "version": "1.0.0",
   "description": "Set of reusable hooks for Hemilabs apps with React and Typescript",
   "keywords": [
@@ -27,7 +27,10 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^20.3.1",
+    "@tanstack/react-query": "5.90.20",
     "@tsconfig/vite-react": "^7.0.2",
+    "@types/react": "^19.2.10",
+    "@wagmi/core": "^2.19.5",
     "better-sort-github-actions": "^1.0.0",
     "better-sort-package-json": "^1.1.1",
     "commitlint-config-bloq": "^1.1.0",
@@ -36,8 +39,22 @@
     "knip": "^5.82.1",
     "lint-staged": "^16.2.7",
     "prettier": "^3.8.1",
-    "typescript": "^5.9.3"
+    "react": "^19.2.4",
+    "typescript": "^5.9.3",
+    "viem": "^2.45.0",
+    "viem-erc20": "^2.1.0",
+    "wagmi": "^2.19.5",
+    "wallet-watch-asset": "github:hemilabs/wallet-watch-asset#v1.0.1"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5",
+    "react": "^19",
+    "viem": "^2",
+    "viem-erc20": "^2",
+    "wagmi": "^2",
+    "wallet-watch-asset": "^1"
   },
   "packageManager": "pnpm@10.28.1",
-  "type": "module"
+  "type": "module",
+  "sideEffects": false
 }
