@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
+    "allowImportingTsExtensions": false,
     "baseUrl": "./src",
     "erasableSyntaxOnly": true
   },
   "extends": "@tsconfig/vite-react/tsconfig.json",
-  "include": ["**/**/*.ts", "**/**/*.tsx"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
