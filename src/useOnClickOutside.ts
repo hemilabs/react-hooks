@@ -30,13 +30,13 @@ export const useOnClickOutside = function <T extends HTMLElement>(
         document.removeEventListener("touchstart", listener);
       };
     },
-    // Add ref and handler to effect dependencies
+    // Add handler to effect dependencies
     // It's worth noting that because passed in handler is a new ...
     // ... function on every render that will cause this effect ...
     // ... callback/cleanup to run every render. It's not a big deal ...
     // ... but to optimize you can wrap handler in useCallback before ...
     // ... passing it into this hook.
-    [ref, handler],
+    [handler],
   );
 
   return ref;
