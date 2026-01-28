@@ -34,23 +34,23 @@ export const allowanceQueryKey = ({
 /**
  * Fetches the ERC20 token allowance for an owner-spender pair.
  */
-export const useAllowance = <TData = bigint>({
+export const useAllowance = function <TData = bigint>({
   owner,
+  query,
   spender,
   token,
-  query,
-}: UseAllowanceParameters<TData>) => {
+}: UseAllowanceParameters<TData>) {
   const publicClient = usePublicClient({ chainId: token.chainId });
 
   return useQuery({
-    queryKey: allowanceQueryKey({ owner, spender, token }),
+    enabled: !!publicClient && !!owner && !!spender,
     queryFn: () =>
       allowance(publicClient!, {
         address: token.address,
         owner: owner!,
         spender: spender!,
       }),
-    enabled: !!publicClient && !!owner && !!spender,
+    queryKey: allowanceQueryKey({ owner, spender, token }),
     ...query,
   });
 };

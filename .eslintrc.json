@@ -1,1 +1,17 @@
-{}
+{
+  "extends": ["bloq", "bloq/typescript", "prettier"],
+  "ignorePatterns": ["_esm/*", "_types/*"],
+  "overrides": [
+    {
+      "extends": ["bloq/markdown"],
+      "files": ["*.md"]
+    },
+    {
+      "extends": ["bloq/markdown"],
+      "files": [".github/pull_request_template.md"],
+      "rules": {
+        "markdownlint/md041": "off"
+      }
+    }
+  ]
+}

@@ -16,19 +16,19 @@ type UseNeedsApprovalParameters = {
  * Checks if an ERC20 token needs approval for a specific amount.
  * Returns true if the current allowance is less than the required amount.
  */
-export const useNeedsApproval = ({
+export const useNeedsApproval = function ({
   amount,
   spender,
   token,
-}: UseNeedsApprovalParameters) => {
+}: UseNeedsApprovalParameters) {
   const { address: owner } = useAccount();
 
   return useAllowance({
     owner,
-    spender,
-    token,
     query: {
       select: (allowance) => allowance < amount,
     },
+    spender,
+    token,
   });
 };
