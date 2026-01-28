@@ -18,7 +18,7 @@ export const useOnKeyUp = function <T extends HTMLElement>(
         document.removeEventListener("keyup", handler);
       };
     },
-    [ref, handler],
+    [handler],
   );
 
   return ref;
