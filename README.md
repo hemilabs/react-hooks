@@ -20,17 +20,17 @@ npm install @hemilabs/react-hooks
 
 ## Hooks Reference
 
-| Hook Name                              | Source File                                                                               |
-| -------------------------------------- | ----------------------------------------------------------------------------------------- |
-| useAddTokenToWallet                    | [useAddTokenToWallet](./src/useAddTokenToWallet.ts)                                       |
-| useAllowance                           | [useAllowance](./src/useAllowance.ts)                                                     |
-| useEnsureConnectedTo                   | [useEnsureConnectedTo](./src/useEnsureConnectedTo.ts)                                     |
-| useNativeBalance                       | [useNativeBalance](./src/useNativeBalance.ts)                                             |
-| useTokenBalance                        | [useTokenBalance](./src/useTokenBalance.ts)                                               |
-| useEstimateApproveGasUnits             | [useEstimateApproveGasUnits](./src/useEstimateApproveGasUnits.ts)                         |
-| useInvalidateNativeBalanceAfterReceipt | [useInvalidateNativeBalanceAfterReceipt](./src/useInvalidateNativeBalanceAfterReceipt.ts) |
-| useNeedsApproval                       | [useNeedsApproval](./src/useNeedsApproval.ts)                                             |
-| useOnClickOutside                      | [useOnClickOutside](./src/useOnClickOutside.ts)                                           |
-| useOnKeyUp                             | [useOnKeyUp](./src/useOnKeyUp.ts)                                                         |
-| useTotalSupply                         | [useTotalSupply](./src/useTotalSupply.ts)                                                 |
-| useWindowSize                          | [useWindowSize](./src/useWindowSize.ts)                                                   |
+| Hook Name                          | Source File                                                                       |
+| ---------------------------------- | --------------------------------------------------------------------------------- |
+| useAddTokenToWallet                | [useAddTokenToWallet](./src/useAddTokenToWallet.ts)                               |
+| useAllowance                       | [useAllowance](./src/useAllowance.ts)                                             |
+| useEnsureConnectedTo               | [useEnsureConnectedTo](./src/useEnsureConnectedTo.ts)                             |
+| useNativeBalance                   | [useNativeBalance](./src/useNativeBalance.ts)                                     |
+| useTokenBalance                    | [useTokenBalance](./src/useTokenBalance.ts)                                       |
+| useEstimateApproveGasUnits         | [useEstimateApproveGasUnits](./src/useEstimateApproveGasUnits.ts)                 |
+| useUpdateNativeBalanceAfterReceipt | [useUpdateNativeBalanceAfterReceipt](./src/useUpdateNativeBalanceAfterReceipt.ts) |
+| useNeedsApproval                   | [useNeedsApproval](./src/useNeedsApproval.ts)                                     |
+| useOnClickOutside                  | [useOnClickOutside](./src/useOnClickOutside.ts)                                   |
+| useOnKeyUp                         | [useOnKeyUp](./src/useOnKeyUp.ts)                                                 |
+| useTotalSupply                     | [useTotalSupply](./src/useTotalSupply.ts)                                         |
+| useWindowSize                      | [useWindowSize](./src/useWindowSize.ts)                                           |
