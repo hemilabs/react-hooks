@@ -6,7 +6,7 @@ Set of reusable hooks for Hemilabs apps with React and Typescript
 
 ## Installation
 
-Maker sure the peer dependencies list is installed
+Make sure the peer dependencies list is installed
 
 ```sh
 npm install @tanstack/react-query viem viem-erc20 wagmi github:hemilabs/wallet-watch-asset#v1.0.1
