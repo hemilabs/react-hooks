@@ -1,0 +1,43 @@
+import { useRef, useEffect, type RefObject } from "react";
+
+/**
+ * Calls a handler when clicking or touching outside the referenced element.
+ * Returns a ref to attach to the element.
+ */
+export const useOnClickOutside = function <T extends HTMLElement>(
+  handler?: (e: MouseEvent | TouchEvent) => void,
+  initialRef?: RefObject<T | null>,
+) {
+  const internalRef = useRef<T>(null);
+  const ref = initialRef ?? internalRef;
+
+  useEffect(
+    function () {
+      if (!handler) {
+        return undefined;
+      }
+      const listener = function (e: MouseEvent | TouchEvent) {
+        // Do nothing if clicking ref's element or descendent elements
+        if (!ref.current || ref.current.contains(e.target as Node)) {
+          return;
+        }
+        handler?.(e);
+      };
+      document.addEventListener("mousedown", listener);
+      document.addEventListener("touchstart", listener);
+      return function () {
+        document.removeEventListener("mousedown", listener);
+        document.removeEventListener("touchstart", listener);
+      };
+    },
+    // Add handler to effect dependencies
+    // It's worth noting that because passed in handler is a new ...
+    // ... function on every render that will cause this effect ...
+    // ... callback/cleanup to run every render. It's not a big deal ...
+    // ... but to optimize you can wrap handler in useCallback before ...
+    // ... passing it into this hook.
+    [handler],
+  );
+
+  return ref;
+};

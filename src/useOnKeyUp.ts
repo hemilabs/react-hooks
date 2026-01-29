@@ -1,0 +1,25 @@
+import { useRef, useEffect, type RefObject } from "react";
+
+/**
+ * Attaches a keyup event listener to the document.
+ * Returns a ref for optional element tracking.
+ */
+export const useOnKeyUp = function <T extends HTMLElement>(
+  handler: (e: KeyboardEvent) => void,
+  initialRef?: RefObject<T | null>,
+) {
+  const internalRef = useRef<T>(null);
+  const ref = initialRef ?? internalRef;
+
+  useEffect(
+    function () {
+      document.addEventListener("keyup", handler);
+      return function () {
+        document.removeEventListener("keyup", handler);
+      };
+    },
+    [handler],
+  );
+
+  return ref;
+};
