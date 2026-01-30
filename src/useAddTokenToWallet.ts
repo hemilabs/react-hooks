@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import { type Address, type Chain } from "viem";
 import { useAccount, useWalletClient } from "wagmi";
-import watchAsset from "wallet-watch-asset";
+import watchAsset from "@hemilabs/wallet-watch-asset";
 
 import { useEnsureConnectedTo } from "./useEnsureConnectedTo";
 
