@@ -34,6 +34,7 @@
     "lint": "eslint --cache .",
     "lint:fix": "eslint --cache . --fix",
     "prepare": "husky",
+    "prepublishOnly": "npm run build",
     "tsc": "tsc"
   },
   "devDependencies": {
