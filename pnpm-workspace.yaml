@@ -2,4 +2,4 @@ packages:
   - "."
 
 onlyBuiltDependencies:
-  - "wallet-watch-asset"
+  - "@hemilabs/wallet-watch-asset"
