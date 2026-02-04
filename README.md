@@ -24,6 +24,7 @@ npm install @hemilabs/react-hooks
 | ---------------------------------- | --------------------------------------------------------------------------------- |
 | useAddTokenToWallet                | [useAddTokenToWallet](./src/useAddTokenToWallet.ts)                               |
 | useAllowance                       | [useAllowance](./src/useAllowance.ts)                                             |
+| useDebounce                        | [useDebounce](./src/useDebounce.ts)                                               |
 | useEnsureConnectedTo               | [useEnsureConnectedTo](./src/useEnsureConnectedTo.ts)                             |
 | useNativeBalance                   | [useNativeBalance](./src/useNativeBalance.ts)                                     |
 | useTokenBalance                    | [useTokenBalance](./src/useTokenBalance.ts)                                       |
