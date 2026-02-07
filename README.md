@@ -26,6 +26,7 @@ npm install @hemilabs/react-hooks
 | useAllowance                       | [useAllowance](./src/useAllowance.ts)                                             |
 | useDebounce                        | [useDebounce](./src/useDebounce.ts)                                               |
 | useEnsureConnectedTo               | [useEnsureConnectedTo](./src/useEnsureConnectedTo.ts)                             |
+| useEstimateFees                    | [useEstimateFees](./src/useEstimateFees.ts)                                       |
 | useNativeBalance                   | [useNativeBalance](./src/useNativeBalance.ts)                                     |
 | useTokenBalance                    | [useTokenBalance](./src/useTokenBalance.ts)                                       |
 | useUpdateNativeBalanceAfterReceipt | [useUpdateNativeBalanceAfterReceipt](./src/useUpdateNativeBalanceAfterReceipt.ts) |
