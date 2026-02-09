@@ -3,4 +3,5 @@ _types
 .eslintcache
 .DS_Store
 .vscode
+coverage
 node_modules
