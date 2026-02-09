@@ -22,12 +22,12 @@ export type EstimateTotalFeeParams = {
  * This implementation is based on
  * See https://github.com/hemilabs/ui-monorepo/blob/694c9fd0e5e8d8deee8f99e7ee5e6d7783020e0e/portal/hooks/useEstimateFees.ts#L56
  *
- * @param {Object} params - Function parameters.
- * @param {bigint} params.baseFeePerGas - The base fee per gas from the latest block (in wei).
- * @param {bigint | undefined} params.maxPriorityFeePerGas - The suggested priority fee per gas (in wei), or undefined if unavailable.
- * @param {bigint | undefined} params.gasUnits - Estimated gas units for the transaction, or undefined if unavailable.
- * @param {number} [params.overEstimation=1.5] - Optional multiplier to pad the estimated fee for safety.
- * @param {bigint} [params.fallbackPriorityFee=1000000000n] - Fallback priority fee in wei to use when maxPriorityFeePerGas is unavailable or too low.
+ * @param params - Function parameters.
+ * @param params.baseFeePerGas - The base fee per gas from the latest block (in wei).
+ * @param params.maxPriorityFeePerGas - The suggested priority fee per gas (in wei), or undefined if unavailable.
+ * @param params.gasUnits - Estimated gas units for the transaction, or undefined if unavailable.
+ * @param params.overEstimation - Optional multiplier to pad the estimated fee for safety.
+ * @param params.fallbackPriorityFee - Fallback priority fee in wei to use when maxPriorityFeePerGas is unavailable or too low.
  *
  * @returns {bigint | undefined} Estimated total fee in wei, or undefined if required values are not yet loaded.
  */
