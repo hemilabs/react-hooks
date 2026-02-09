@@ -19,8 +19,8 @@ export type EstimateTotalFeeParams = {
  * calculate a conservative `maxFeePerGas`, and multiplies it by the estimated gas units.
  * This function supports a custom `overEstimation` factor to pad the result for safety.
  *
- * This implementation is based on
- * See https://github.com/hemilabs/ui-monorepo/blob/694c9fd0e5e8d8deee8f99e7ee5e6d7783020e0e/portal/hooks/useEstimateFees.ts#L56
+ * Based on:
+ * https://github.com/hemilabs/ui-monorepo/blob/694c9fd0e5e8d8deee8f99e7ee5e6d7783020e0e/portal/hooks/useEstimateFees.ts#L56
  *
  * @param params - Function parameters.
  * @param params.baseFeePerGas - The base fee per gas from the latest block (in wei).
@@ -43,8 +43,8 @@ export function estimateTotalFee({
     return undefined;
   }
 
-  // Convert the suggested priority fee (in wei) to a BigInt.
-  // If not available, fallback to zero for now and correct below.
+  // Normalize the suggested priority fee (in wei): if it's undefined, temporarily
+  // default to zero and adjust to at least the fallback value in the logic below.
   const rawPriorityFeeWei = maxPriorityFeePerGas ?? 0n;
 
   // Use the estimated priority fee if it's above the fallback,
