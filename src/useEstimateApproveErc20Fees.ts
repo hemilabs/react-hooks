@@ -15,6 +15,7 @@ export const useEstimateApproveErc20Fees = function ({
   token: { address: Address; chainId: Chain["id"] };
 }) {
   const { data: gasUnits, isError } = useEstimateGas({
+    chainId: token.chainId,
     data: encodeFunctionData({
       abi: erc20Abi,
       args: [spender, amount],
