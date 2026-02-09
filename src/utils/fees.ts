@@ -38,6 +38,15 @@ export function estimateTotalFee({
   maxPriorityFeePerGas,
   overEstimation = DEFAULT_OVER_ESTIMATION,
 }: EstimateTotalFeeParams) {
+  // Validate overEstimation: must be a positive finite number
+  if (
+    typeof overEstimation !== "number" ||
+    !Number.isFinite(overEstimation) ||
+    overEstimation <= 0
+  ) {
+    throw new Error("overEstimation must be a positive finite number");
+  }
+
   // If gas units or base fee are not available, return undefined as we cannot estimate the total fee.
   if (gasUnits === undefined || baseFeePerGas === undefined) {
     return undefined;

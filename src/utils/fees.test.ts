@@ -192,4 +192,59 @@ describe("estimateTotalFee", function () {
     // = 105000000 Gwei * 1.75 = 183750000 Gwei
     expect(result).toBe(parseEther("183750000", "gwei"));
   });
+
+  it("should throw when overEstimation is negative", function () {
+    expect(() =>
+      estimateTotalFee({
+        ...validParameters,
+        overEstimation: -1,
+      }),
+    ).toThrow("overEstimation must be a positive finite number");
+  });
+
+  it("should throw when overEstimation is zero", function () {
+    expect(() =>
+      estimateTotalFee({
+        ...validParameters,
+        overEstimation: 0,
+      }),
+    ).toThrow("overEstimation must be a positive finite number");
+  });
+
+  it("should throw when overEstimation is NaN", function () {
+    expect(() =>
+      estimateTotalFee({
+        ...validParameters,
+        overEstimation: NaN,
+      }),
+    ).toThrow("overEstimation must be a positive finite number");
+  });
+
+  it("should throw when overEstimation is Infinity", function () {
+    expect(() =>
+      estimateTotalFee({
+        ...validParameters,
+        overEstimation: Infinity,
+      }),
+    ).toThrow("overEstimation must be a positive finite number");
+  });
+
+  it("should throw when overEstimation is negative Infinity", function () {
+    expect(() =>
+      estimateTotalFee({
+        ...validParameters,
+        overEstimation: -Infinity,
+      }),
+    ).toThrow("overEstimation must be a positive finite number");
+  });
+
+  it("should throw when overEstimation is not a number", function () {
+    expect(() =>
+      estimateTotalFee({
+        ...validParameters,
+        // @ts-expect-error - testing runtime behavior with invalid type
+        overEstimation: "1.5",
+      }),
+    ).toThrow("overEstimation must be a positive finite number");
+  });
 });
