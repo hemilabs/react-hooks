@@ -1,6 +1,6 @@
 import { queryOptions, useQuery } from "@tanstack/react-query";
 import type { UseQueryOptions, DefaultError } from "@tanstack/react-query";
-import type { Address, Chain, Client } from "viem";
+import { isAddress, type Address, type Chain, type Client } from "viem";
 import { allowance } from "viem-erc20/actions";
 import { usePublicClient } from "wagmi";
 
@@ -38,25 +38,30 @@ export const allowanceQueryOptions = <TData = bigint>({
   spender,
   token,
 }: {
-  client: Client;
-  owner: Address;
+  client: Client | undefined;
+  owner: Address | undefined;
   query?: Omit<
     UseQueryOptions<bigint, DefaultError, TData>,
     "queryFn" | "queryKey" | "enabled"
   >;
-  spender: Address;
+  spender: Address | undefined;
   token: {
     address: Address;
     chainId: Chain["id"];
   };
 }) =>
   queryOptions({
-    enabled: !!owner && !!spender && !!client,
+    enabled:
+      !!owner &&
+      isAddress(owner) &&
+      !!spender &&
+      isAddress(spender) &&
+      !!client,
     queryFn: () =>
-      allowance(client, {
+      allowance(client!, {
         address: token.address,
-        owner,
-        spender,
+        owner: owner!,
+        spender: spender!,
       }),
     queryKey: allowanceQueryKey({ owner, spender, token }),
     ...query,
@@ -75,10 +80,10 @@ export const useAllowance = function <TData = bigint>({
 
   return useQuery(
     allowanceQueryOptions({
-      client: publicClient!,
-      owner: owner!,
+      client: publicClient,
+      owner,
       query,
-      spender: spender!,
+      spender,
       token,
     }),
   );
