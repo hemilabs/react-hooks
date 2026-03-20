@@ -66,6 +66,9 @@ export const estimateFeesQueryOptions = ({
   queryOptions({
     enabled: gasUnits !== undefined,
     async queryFn() {
+      if (gasUnits === undefined) {
+        return undefined;
+      }
       const [feeHistory, maxPriorityFeePerGas] = await Promise.all([
         queryClient.ensureQueryData(
           getFeeHistoryQueryOptions(config, {
