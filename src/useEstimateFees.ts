@@ -20,7 +20,7 @@ const defaultFallbackPriorityFee = parseEther("1", "gwei");
 
 type EstimateFeesParameters = {
   chainId: number;
-  gasUnits: bigint | undefined;
+  gasUnits?: bigint;
   overEstimation?: number;
   fallbackPriorityFee?: bigint;
 };
