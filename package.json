@@ -75,8 +75,8 @@
   "type": "module",
   "exports": {
     "./*": {
-      "types": "./_types/*.d.ts",
-      "import": "./_esm/*.js"
+      "types": "./_types/*/index.d.ts",
+      "import": "./_esm/*/index.js"
     }
   },
   "sideEffects": false

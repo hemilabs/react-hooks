@@ -1,7 +1,7 @@
 import type { Address, Chain } from "viem";
 import { useAccount } from "wagmi";
 
-import { useAllowance } from "./useAllowance";
+import { useAllowance } from "../useAllowance";
 
 type UseNeedsApprovalParameters = {
   amount: bigint;

@@ -1,4 +1,4 @@
 {
-  "entry": ["src/*.ts"],
+  "entry": ["src/*/index.ts"],
   "ignoreDependencies": ["eslint-config-prettier"]
 }

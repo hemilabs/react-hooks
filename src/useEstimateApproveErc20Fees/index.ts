@@ -1,7 +1,7 @@
 import { type Address, type Chain, encodeFunctionData, erc20Abi } from "viem";
 import { useEstimateGas } from "wagmi";
 
-import { useEstimateFees } from "./useEstimateFees";
+import { useEstimateFees } from "../useEstimateFees";
 
 export const useEstimateApproveErc20Fees = function ({
   amount,

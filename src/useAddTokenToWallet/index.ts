@@ -3,7 +3,7 @@ import { type Address, type Chain } from "viem";
 import { useAccount, useWalletClient } from "wagmi";
 import watchAsset from "@hemilabs/wallet-watch-asset";
 
-import { useEnsureConnectedTo } from "./useEnsureConnectedTo";
+import { useEnsureConnectedTo } from "../useEnsureConnectedTo";
 
 type Token = {
   address: Address;
