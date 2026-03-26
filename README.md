@@ -20,19 +20,19 @@ npm install @hemilabs/react-hooks
 
 ## Hooks Reference
 
-| Hook Name                          | Source File                                                                       |
-| ---------------------------------- | --------------------------------------------------------------------------------- |
-| useAddTokenToWallet                | [useAddTokenToWallet](./src/useAddTokenToWallet.ts)                               |
-| useAllowance                       | [useAllowance](./src/useAllowance.ts)                                             |
-| useDebounce                        | [useDebounce](./src/useDebounce.ts)                                               |
-| useEnsureConnectedTo               | [useEnsureConnectedTo](./src/useEnsureConnectedTo.ts)                             |
-| useEstimateApproveErc20Fees        | [useEstimateApproveErc20Fees](./src/useEstimateApproveErc20Fees.ts)               |
-| useEstimateFees                    | [useEstimateFees](./src/useEstimateFees.ts)                                       |
-| useNativeBalance                   | [useNativeBalance](./src/useNativeBalance.ts)                                     |
-| useTokenBalance                    | [useTokenBalance](./src/useTokenBalance.ts)                                       |
-| useUpdateNativeBalanceAfterReceipt | [useUpdateNativeBalanceAfterReceipt](./src/useUpdateNativeBalanceAfterReceipt.ts) |
-| useNeedsApproval                   | [useNeedsApproval](./src/useNeedsApproval.ts)                                     |
-| useOnClickOutside                  | [useOnClickOutside](./src/useOnClickOutside.ts)                                   |
-| useOnKeyUp                         | [useOnKeyUp](./src/useOnKeyUp.ts)                                                 |
-| useTotalSupply                     | [useTotalSupply](./src/useTotalSupply.ts)                                         |
-| useWindowSize                      | [useWindowSize](./src/useWindowSize.ts)                                           |
+| Hook Name                          | Docs                                                                           |
+| ---------------------------------- | ------------------------------------------------------------------------------ |
+| useAddTokenToWallet                | [useAddTokenToWallet](./src/useAddTokenToWallet)                               |
+| useAllowance                       | [useAllowance](./src/useAllowance)                                             |
+| useDebounce                        | [useDebounce](./src/useDebounce)                                               |
+| useEnsureConnectedTo               | [useEnsureConnectedTo](./src/useEnsureConnectedTo)                             |
+| useEstimateApproveErc20Fees        | [useEstimateApproveErc20Fees](./src/useEstimateApproveErc20Fees)               |
+| useEstimateFees                    | [useEstimateFees](./src/useEstimateFees)                                       |
+| useNativeBalance                   | [useNativeBalance](./src/useNativeBalance)                                     |
+| useNeedsApproval                   | [useNeedsApproval](./src/useNeedsApproval)                                     |
+| useOnClickOutside                  | [useOnClickOutside](./src/useOnClickOutside)                                   |
+| useOnKeyUp                         | [useOnKeyUp](./src/useOnKeyUp)                                                 |
+| useTokenBalance                    | [useTokenBalance](./src/useTokenBalance)                                       |
+| useTotalSupply                     | [useTotalSupply](./src/useTotalSupply)                                         |
+| useUpdateNativeBalanceAfterReceipt | [useUpdateNativeBalanceAfterReceipt](./src/useUpdateNativeBalanceAfterReceipt) |
+| useWindowSize                      | [useWindowSize](./src/useWindowSize)                                           |
