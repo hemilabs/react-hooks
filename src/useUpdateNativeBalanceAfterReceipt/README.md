@@ -29,7 +29,7 @@ Returns a function: `(receipt: TransactionReceipt, amount?: bigint) => void`
 import { useUpdateNativeBalanceAfterReceipt } from "@hemilabs/react-hooks/useUpdateNativeBalanceAfterReceipt";
 
 function Transaction() {
-  const updateBalance = useUpdateNativeBalanceAfterReceipt({ chainId: 1 });
+  const updateBalance = useUpdateNativeBalanceAfterReceipt(1);
 
   const onSuccess = (receipt: TransactionReceipt) => {
     // Updates cached balance by subtracting gas + amount sent

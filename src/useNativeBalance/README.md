@@ -24,7 +24,7 @@ Returns the result from wagmi's `useBalance` hook.
 import { useNativeBalance } from "@hemilabs/react-hooks/useNativeBalance";
 
 function Balance() {
-  const { data: balance } = useNativeBalance({ chainId: 1 });
+  const { data: balance } = useNativeBalance(1);
 
   return (
     <span>

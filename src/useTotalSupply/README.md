@@ -13,10 +13,12 @@ import {
 
 ## Parameters
 
-| Parameter     | Type      | Required | Description            |
-| ------------- | --------- | -------- | ---------------------- |
-| token.address | `Address` | Yes      | Token contract address |
-| token.chainId | `number`  | Yes      | Chain ID               |
+Takes a `token` object directly (not wrapped):
+
+| Parameter | Type      | Required | Description            |
+| --------- | --------- | -------- | ---------------------- |
+| address   | `Address` | Yes      | Token contract address |
+| chainId   | `number`  | Yes      | Chain ID               |
 
 ## Return Value
 
@@ -24,7 +26,7 @@ Returns `UseQueryResult<bigint>` with the total supply.
 
 ## Exported Helpers
 
-- **`totalSupplyQueryKey({ token })`** - Generates a query key for cache management.
+- **`totalSupplyQueryKey(token)`** - Generates a query key for cache management.
 
 ## Usage
 
@@ -33,7 +35,8 @@ import { useTotalSupply } from "@hemilabs/react-hooks/useTotalSupply";
 
 function TotalSupply() {
   const { data: totalSupply } = useTotalSupply({
-    token: { address: "0x...", chainId: 1 },
+    address: "0x...",
+    chainId: 1,
   });
 
   return <span>Total Supply: {totalSupply?.toString()}</span>;
