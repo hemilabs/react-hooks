@@ -3,7 +3,7 @@ import { type GetBalanceReturnType } from "@wagmi/core";
 import { useCallback } from "react";
 import type { Chain, TransactionReceipt } from "viem";
 
-import { useNativeBalance } from "./useNativeBalance";
+import { useNativeBalance } from "../useNativeBalance";
 
 /**
  * Returns a function that updates the native token balance after a transaction receipt.

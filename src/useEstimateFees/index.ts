@@ -12,7 +12,7 @@ import {
 import { parseEther } from "viem/utils";
 import { useConfig } from "wagmi";
 
-import { estimateTotalFee } from "./utils/fees";
+import { estimateTotalFee } from "../utils/fees";
 
 const defaultBlockCount = 4;
 const defaultOverEstimation = 1.5;
