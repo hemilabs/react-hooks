@@ -35,4 +35,5 @@ npm install @hemilabs/react-hooks
 | useTokenBalance                    | [useTokenBalance](./src/useTokenBalance)                                       |
 | useTotalSupply                     | [useTotalSupply](./src/useTotalSupply)                                         |
 | useUpdateNativeBalanceAfterReceipt | [useUpdateNativeBalanceAfterReceipt](./src/useUpdateNativeBalanceAfterReceipt) |
+| useVisualViewportSize              | [useVisualViewportSize](./src/useVisualViewportSize)                           |
 | useWindowSize                      | [useWindowSize](./src/useWindowSize)                                           |
