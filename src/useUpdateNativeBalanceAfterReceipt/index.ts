@@ -23,10 +23,11 @@ export const useUpdateNativeBalanceAfterReceipt = function (
     ) =>
       queryClient.setQueryData(
         nativeTokenBalanceQueryKey,
-        (old: GetBalanceReturnType) => ({
-          ...old,
-          value: old.value - effectiveGasPrice * gasUsed - amount,
-        }),
+        (old: GetBalanceReturnType | undefined) =>
+          old && {
+            ...old,
+            value: old.value - effectiveGasPrice * gasUsed - amount,
+          },
       ),
     [queryClient, nativeTokenBalanceQueryKey],
   );
